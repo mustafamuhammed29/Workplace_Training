@@ -6,10 +6,8 @@ abstract class ForgetPasswordController extends GetxController {
   checkemail();
   goToVerfiyCode();
 }
-
 class ForgetPasswordControllerImp extends ForgetPasswordController {
   late TextEditingController email;
-
   @override
   checkemail() {}
 
@@ -17,13 +15,11 @@ class ForgetPasswordControllerImp extends ForgetPasswordController {
   goToVerfiyCode() {
     Get.offNamed(AppRoute.verfiyCode);
   }
-
   @override
   void onInit() {
     email = TextEditingController();
     super.onInit();
   }
-
   @override
   void dispose() {
     email.dispose();

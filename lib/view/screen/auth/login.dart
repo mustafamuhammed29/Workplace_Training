@@ -22,8 +22,7 @@ class Login extends StatelessWidget {
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
         title: Text('Sign In',
-            style: Theme
-                .of(context)
+            style: Theme.of(context)
                 .textTheme
                 .headline1!
                 .copyWith(color: AppColor.grey)),
@@ -53,9 +52,14 @@ class Login extends StatelessWidget {
             labeltext: "Password",
             // mycontroller: ,
           ),
-          const Text(
-            "Forget Password",
-            textAlign: TextAlign.end,
+          InkWell(
+            onTap: () {
+              controller.goToForgetPassword();
+            },
+            child: const Text(
+              "Forget Password",
+              textAlign: TextAlign.end,
+            ),
           ),
           CustomButtomAuth(text: "Sign In", onPressed: () {}),
           const SizedBox(height: 40),

@@ -7,6 +7,7 @@ import 'package:workplace_training/view/screen/auth/signup.dart';
 import 'package:workplace_training/view/screen/auth/verifycode.dart';
 import 'package:workplace_training/view/screen/onboarding.dart';
 
+
 Map<String, Widget Function(BuildContext)> routes = {
   // Auth
   AppRoute.login: (context) => const Login(),

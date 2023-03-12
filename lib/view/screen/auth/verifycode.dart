@@ -1,10 +1,12 @@
 import 'package:workplace_training/controller/auth/forgetpassword_controller.dart';
+import 'package:workplace_training/controller/auth/verifycode_controller.dart';
 import 'package:workplace_training/core/constant/color.dart';
 import 'package:workplace_training/view/widget/auth/custombuttonauth.dart';
 import 'package:workplace_training/view/widget/auth/customtextbodyauth.dart';
 import 'package:workplace_training/view/widget/auth/customtextformauth.dart';
 import 'package:workplace_training/view/widget/auth/customtexttitleauth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 
 class VerfiyCode extends StatelessWidget {
@@ -12,8 +14,8 @@ class VerfiyCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordControllerImp controller =
-    Get.put(ForgetPasswordControllerImp());
+    VerifyCodeControllerImp controller =
+    Get.put(VerifyCodeControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -22,7 +24,7 @@ class VerfiyCode extends StatelessWidget {
         title: Text('Verification Code',
             style: Theme.of(context)
                 .textTheme
-                .headline1!
+                .displayLarge!
                 .copyWith(color: AppColor.grey)),
       ),
       body: Container(
@@ -33,16 +35,21 @@ class VerfiyCode extends StatelessWidget {
           const SizedBox(height: 10),
           const CustomTextBodyAuth(
               text:
-              "Sign Up With Your Email And Password OR Continue With Social Media"),
+              "Please Enter The Digit Code Sent To mustafamuhammed@gmail.com"),
           const SizedBox(height: 15),
-          CustonTextFormAuth(
-            mycontroller: controller.email,
-            hinttext: "Enter Your Email",
-            iconData: Icons.email_outlined,
-            labeltext: "Email",
-            // mycontroller: ,
+          OtpTextField(
+
+            fieldWidth: 50.0,
+            borderRadius: BorderRadius.circular(20),
+            numberOfFields: 5,
+            borderColor: Color(0xFF512DA8),
+            showFieldAsBox: true,
+            onCodeChanged: (String code) {
+            },
+            onSubmit: (String verificationCode) {
+              controller.goToResetPassword() ;
+            }, // end onSubmit
           ),
-          CustomButtomAuth(text: "Check", onPressed: () {}),
           const SizedBox(height: 40),
         ]),
       ),
