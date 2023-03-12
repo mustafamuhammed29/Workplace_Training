@@ -1,4 +1,4 @@
-import 'package:workplace_training/core/services/controller/onboarding_controller.dart';
+import 'package:workplace_training/controller/onboarding_controller.dart';
 import 'package:workplace_training/core/constant/color.dart';
 import 'package:workplace_training/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';

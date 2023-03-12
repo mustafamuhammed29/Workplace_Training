@@ -1,4 +1,4 @@
-import 'package:workplace_training/core/services/controller/onboarding_controller.dart';
+import 'package:workplace_training/controller/onboarding_controller.dart';
 import 'package:workplace_training/core/constant/color.dart';
 import 'package:workplace_training/view/widget/onboarding/custombutton.dart';
 import 'package:workplace_training/view/widget/onboarding/customslider.dart';

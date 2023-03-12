@@ -1,4 +1,4 @@
-import 'package:workplace_training/core/services/controller/onboarding_controller.dart';
+import 'package:workplace_training/controller/onboarding_controller.dart';
 import 'package:workplace_training/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +22,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
               // height: 230,
               // fit: BoxFit.fill,
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 50),
             Text(onBoardingList[i].title!,
                 style: Theme.of(context).textTheme.headline1),
             const SizedBox(height: 20),
