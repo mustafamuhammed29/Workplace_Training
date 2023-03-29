@@ -7,9 +7,9 @@ abstract class VerifyCodeController extends GetxController {
   goToResetPassword();
 }
 
-class VerifyCodeControllerImp extends VerifyCodeController {
+class VerifyCodeControllerImp extends VerifyCodeController {  
 
-  late String verifycode  ;
+  late String verifycode  ; 
 
   @override
   checkCode() {}
@@ -20,9 +20,9 @@ class VerifyCodeControllerImp extends VerifyCodeController {
   }
 
   @override
-  void onInit() {
+  void onInit() {  
     super.onInit();
   }
 
-
+ 
 }

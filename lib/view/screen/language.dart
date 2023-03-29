@@ -1,9 +1,8 @@
-
 import 'package:workplace_training/core/constant/routes.dart';
 import 'package:workplace_training/core/localization/changelocal.dart';
 import 'package:workplace_training/view/widget/language/custombuttomlang.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart'; 
 
 class Language extends GetView<LocaleController> {
   const Language({Key? key}) : super(key: key);
@@ -22,19 +21,13 @@ class Language extends GetView<LocaleController> {
                   textbutton: "Ar",
                   onPressed: () {
                     controller.changeLang("ar");
-                    Get.toNamed(AppRoute.onBoarding) ;
+                    Get.toNamed(AppRoute.onBoarding) ; 
                   }),
               CustomButtonLang(
                   textbutton: "En",
                   onPressed: () {
                     controller.changeLang("en");
-                    Get.toNamed(AppRoute.onBoarding) ;
-                  }),
-              CustomButtonLang(
-                  textbutton: "Tr",
-                  onPressed: () {
-                    controller.changeLang("tr");
-                    Get.toNamed(AppRoute.onBoarding) ;
+                    Get.toNamed(AppRoute.onBoarding) ; 
                   }),
             ],
           )),

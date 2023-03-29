@@ -1,5 +1,6 @@
 import 'package:workplace_training/core/constant/color.dart';
 import 'package:flutter/material.dart';
+
 class CustomButtonLang extends StatelessWidget {
   final String textbutton;
   final void Function()? onPressed;
