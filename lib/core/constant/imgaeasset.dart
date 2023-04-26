@@ -10,6 +10,6 @@ class AppImageAsset {
   static const String noData = "$rootLottie/nodata.json";
   static const String server = "$rootLottie/server.json";
 
-// static const String onBoardingImageFour   = "$rootImages/onboardingfour.PNG" ;
+  // static const String onBoardingImageFour   = "$rootImages/onboardingfour.PNG" ;
 
 }

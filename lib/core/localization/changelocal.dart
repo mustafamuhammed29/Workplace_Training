@@ -27,9 +27,6 @@ class LocaleController extends GetxController {
       appTheme = themeArabic;
     } else if (sharedPrefLang == "en") {
       language = const Locale("en");
-      appTheme = themeEnglish;}
-    else if (sharedPrefLang == "tr") {
-      language = const Locale("tr");
       appTheme = themeEnglish;
     } else {
       language = Locale(Get.deviceLocale!.languageCode);

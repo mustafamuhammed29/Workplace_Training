@@ -1,27 +1,47 @@
-import 'package:workplace_training/core/constant/routes.dart'; 
+import 'package:workplace_training/core/class/statusrequest.dart';
+import 'package:workplace_training/core/constant/routes.dart';
+import 'package:workplace_training/core/functions/handingdatacontroller.dart';
+import 'package:workplace_training/data/datasource/remote/auth/verfiycodesignup.dart';
 import 'package:get/get.dart';
 
 abstract class VerifyCodeSignUpController extends GetxController {
   checkCode();
-  goToSuccessSignUp();
+  goToSuccessSignUp(String verfiyCodeSignUp);
 }
 
-class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {  
+class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {
+  VerfiyCodeSignUpData verfiyCodeSignUpData = VerfiyCodeSignUpData(Get.find());
+ 
 
-  late String verifycode  ; 
+  String? email;
+
+  StatusRequest statusRequest = StatusRequest.none ;
 
   @override
   checkCode() {}
 
   @override
-  goToSuccessSignUp() {
-    Get.offNamed(AppRoute.successSignUp);
+  goToSuccessSignUp(verfiyCodeSignUp) async {
+    statusRequest = StatusRequest.loading;
+    update();
+    var response = await verfiyCodeSignUpData.postdata(email!, verfiyCodeSignUp); 
+    statusRequest = handlingData(response);
+    if (StatusRequest.success == statusRequest) {
+      if (response['status'] == "success") { 
+        Get.offNamed(AppRoute.successSignUp);
+      } else {
+        Get.defaultDialog(
+            title: "ُWarning",
+            middleText: "Verify Code Not Correct");
+        statusRequest = StatusRequest.failure;
+      }
+    }
+    update();
   }
 
   @override
-  void onInit() {  
+  void onInit() {
+    email = Get.arguments['email'];
     super.onInit();
   }
-
- 
 }

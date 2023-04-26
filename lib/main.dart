@@ -20,11 +20,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Ecommerce Course',
       locale: controller.language,
       theme: controller.appTheme,
-      initialBinding:InitialBindings() ,
-      // routes: routes,
+      initialBinding: InitialBindings(),
       getPages: routes,
     );
   }

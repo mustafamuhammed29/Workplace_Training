@@ -2,8 +2,8 @@ import 'package:workplace_training/core/class/statusrequest.dart';
 
 handlingData(response){
   if (response is StatusRequest){
-    return response ;
+   return response ; 
   }else {
-    return StatusRequest.success ;
+   return StatusRequest.success ; 
   }
 }

@@ -81,6 +81,8 @@ dependencies:
   flutter_otp_text_field: ^1.0.1
   lottie: ^1.4.1
 
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -103,7 +105,6 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/

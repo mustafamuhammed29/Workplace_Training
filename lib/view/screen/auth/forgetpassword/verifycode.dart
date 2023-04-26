@@ -1,4 +1,4 @@
-import 'package:workplace_training/controller/auth/verifycode_controller.dart'; 
+import 'package:workplace_training/controller/forgetpassword/verifycode_controller.dart'; 
 import 'package:workplace_training/core/constant/color.dart'; 
 import 'package:workplace_training/view/widget/auth/customtextbodyauth.dart'; 
 import 'package:workplace_training/view/widget/auth/customtexttitleauth.dart'; 
@@ -32,7 +32,7 @@ class VerfiyCode extends StatelessWidget {
           const SizedBox(height: 10),
           const CustomTextBodyAuth(
               text:
-                  "Please Enter The Digit Code Sent To mustafa@gmail.com"),
+                  "Please Enter The Digit Code Sent To wael@gmail.com"),
           const SizedBox(height: 15),
             OtpTextField(
               
@@ -48,7 +48,7 @@ class VerfiyCode extends StatelessWidget {
                 },
                 //runs when every textfield is filled
                 onSubmit: (String verificationCode) {
-                     controller.goToResetPassword() ; 
+                     controller.goToResetPassword(verificationCode) ; 
                 }, // end onSubmit
               ), 
           const SizedBox(height: 40),

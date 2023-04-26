@@ -7,9 +7,9 @@ class CustomTextSignUpOrSignIn extends StatelessWidget {
   final void Function() onTap;
   const CustomTextSignUpOrSignIn(
       {Key? key,
-        required this.textone,
-        required this.texttwo,
-        required this.onTap})
+      required this.textone,
+      required this.texttwo,
+      required this.onTap})
       : super(key: key);
 
   @override
