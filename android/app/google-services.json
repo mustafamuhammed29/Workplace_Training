@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "731318039385",
+    "project_id": "firatnet-bd798",
+    "storage_bucket": "firatnet-bd798.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731318039385:android:3c0a70ab872467ecd25248",
+        "android_client_info": {
+          "package_name": "com.mustafamuhammed.workplace_training"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731318039385-s52i22rfellrhib302284b0oapfooe4u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mustafamuhammed.workplace_training",
+            "certificate_hash": "8d277a463e5ac5c8c9ded375d46f865c28525316"
+          }
+        },
+        {
+          "client_id": "731318039385-q4me717k1gl08fieh4dsunnu9sabqqrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFZsGUoBzoiDBxtswG5Qo6hFAIQNiP_7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731318039385-q4me717k1gl08fieh4dsunnu9sabqqrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
