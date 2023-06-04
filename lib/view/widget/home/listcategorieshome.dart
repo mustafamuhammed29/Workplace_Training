@@ -1,5 +1,6 @@
 import 'package:workplace_training/controller/home_controller.dart';
 import 'package:workplace_training/core/constant/color.dart';
+import 'package:workplace_training/core/functions/translatefatabase.dart';
 import 'package:workplace_training/data/model/categoriesmodel.dart';
 import 'package:workplace_training/linkapi.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class ListCategoriesHome extends GetView<HomeControllerImp> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
+      height: 300,
       child: ListView.separated(
         separatorBuilder: (context, index) => const SizedBox(width: 10),
         itemCount: controller.categories.length,
@@ -45,17 +46,17 @@ class Categories extends GetView<HomeControllerImp> {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: AppColor.thirdColor,
+                color: AppColor.primaryColor,
                 borderRadius: BorderRadius.circular(20)),
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            height: 70,
-            width: 70,
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            height: 150,
+            width: 250,
             child: SvgPicture.network(
                 "${AppLink.imagestCategories}/${categoriesModel.categoriesImage}",
                 color: AppColor.secondColor),
           ),
           Text(
-            "${categoriesModel.categoriesName}",
+            "${translateDatabase(categoriesModel.categoriesNamaAr, categoriesModel.categoriesName)}",
             style: const TextStyle(fontSize: 13, color: AppColor.black),
           )
         ],

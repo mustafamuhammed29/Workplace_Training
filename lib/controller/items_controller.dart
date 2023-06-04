@@ -1,15 +1,20 @@
+import 'package:workplace_training/controller/home_controller.dart';
 import 'package:workplace_training/core/class/statusrequest.dart';
 import 'package:workplace_training/core/functions/handingdatacontroller.dart';
+import 'package:workplace_training/core/services/services.dart';
 import 'package:workplace_training/data/datasource/remote/items_data.dart';
+import 'package:workplace_training/data/model/itemsmodel.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class ItemsController extends GetxController {
   intialData();
   changeCat(int val, String catval);
   getItems(String categoryid);
+  goToPageProductDetails(ItemsModel itemsModel);
 }
 
-class ItemsControllerImp extends ItemsController {
+class ItemsControllerImp extends SearchMixController {
   List categories = [];
   String? catid;
   int? selectedCat;
@@ -20,8 +25,11 @@ class ItemsControllerImp extends ItemsController {
 
   late StatusRequest statusRequest;
 
+  MyServices myServices = Get.find();
+
   @override
   void onInit() {
+     search = TextEditingController();
     intialData();
     super.onInit();
   }
@@ -46,7 +54,8 @@ class ItemsControllerImp extends ItemsController {
   getItems(categoryid) async {
     data.clear();
     statusRequest = StatusRequest.loading;
-    var response = await testData.getData(categoryid);
+    var response = await testData.getData(
+        categoryid, myServices.sharedPreferences.getString("id")!);
     print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
@@ -60,4 +69,44 @@ class ItemsControllerImp extends ItemsController {
     }
     update();
   }
+
+  @override
+  goToPageProductDetails(itemsModel) {
+    Get.toNamed("productdetails", arguments: {"itemsmodel": itemsModel});
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class FavoriteController extends GetxController {
+//   Map isFavorite = {};
+
+//   setFavorite(id, val) {
+//     isFavorite[id] = val;
+//     print(isFavorite[id]);
+//     update();
+//   }
+// }

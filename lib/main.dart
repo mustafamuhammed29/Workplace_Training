@@ -14,13 +14,14 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     LocaleController controller = Get.put(LocaleController());
     return GetMaterialApp(
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      title: 'Ecommerce Course',
+      title: 'Fırat Net',
       locale: controller.language,
       theme: controller.appTheme,
       initialBinding: InitialBindings(),

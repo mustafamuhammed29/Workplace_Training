@@ -30,9 +30,9 @@ class VerfiyCode extends StatelessWidget {
           const SizedBox(height: 20),
           const CustomTextTitleAuth(text: "Check code"),
           const SizedBox(height: 10),
-          const CustomTextBodyAuth(
+          CustomTextBodyAuth(
               text:
-                  "Please Enter The Digit Code Sent To wael@gmail.com"),
+              "Please Enter The Digit Code Sent To ${controller.email}"),
           const SizedBox(height: 15),
             OtpTextField(
               

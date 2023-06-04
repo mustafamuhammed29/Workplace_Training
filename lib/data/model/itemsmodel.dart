@@ -16,6 +16,8 @@ class ItemsModel {
   String? categoriesNamaAr;
   String? categoriesImage;
   String? categoriesDatetime;
+  String? favorite;
+  String? itemsPriceDiscount ;  
 
   ItemsModel(
       {this.itemsId,
@@ -30,11 +32,13 @@ class ItemsModel {
       this.itemsDiscount,
       this.itemsDate,
       this.itemsCat,
+      this.itemsPriceDiscount , 
       this.categoriesId,
       this.categoriesName,
       this.categoriesNamaAr,
       this.categoriesImage,
-      this.categoriesDatetime});
+      this.categoriesDatetime,
+      this.favorite});
 
   ItemsModel.fromJson(Map<String, dynamic> json) {
     itemsId = json['items_id'];
@@ -49,11 +53,13 @@ class ItemsModel {
     itemsDiscount = json['items_discount'];
     itemsDate = json['items_date'];
     itemsCat = json['items_cat'];
+    itemsPriceDiscount = json['itemspricedisount'];
     categoriesId = json['categories_id'];
     categoriesName = json['categories_name'];
     categoriesNamaAr = json['categories_nama_ar'];
     categoriesImage = json['categories_image'];
     categoriesDatetime = json['categories_datetime'];
+    favorite = json['favorite'];
   }
 
   Map<String, dynamic> toJson() {

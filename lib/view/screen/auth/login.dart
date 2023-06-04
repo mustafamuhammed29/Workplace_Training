@@ -28,7 +28,7 @@ class Login extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .headline1!
-                .copyWith(color: AppColor.grey)),
+                .copyWith(color: AppColor.black)),
       ),
       body: WillPopScope(
           onWillPop: alertExitApp,
@@ -45,7 +45,7 @@ class Login extends StatelessWidget {
                       const SizedBox(height: 20),
                       CustomTextTitleAuth(text: "10".tr),
                       const SizedBox(height: 10),
-                      CustomTextBodyAuth(text: "11".tr),
+                   //   CustomTextBodyAuth(text: "11".tr),
                       const SizedBox(height: 15),
                       CustomTextFormAuth(
                         isNumber: false,
